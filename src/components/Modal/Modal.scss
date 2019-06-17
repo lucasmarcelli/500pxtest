@@ -1,0 +1,89 @@
+.modal {
+    position: fixed;
+    z-index: 22;
+    display: flex;
+    width: 100%;
+    left: 0;
+    top: 0;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.75);
+
+    .navigation-button {
+        position: fixed;
+        bottom: 8px;
+        width: 175px;
+        text-transform: uppercase;
+        z-index: 9000;
+        height: 36px;
+    }
+
+    .modal-image {
+        padding-bottom: 56px;
+        padding-top: 56px;
+        display: flex;
+        justify-content: center;
+       img {
+           max-height: 100vh;
+           height: 100%;
+       }
+    }
+
+    .modal-details {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(0,0,0,0.5);
+        color: white;
+        height: 164px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .stat-details {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 64px;
+
+            .stat {
+                display: flex;
+                margin-right: 32px;
+            
+                h5 {
+                    margin: 0;
+                }
+                
+                .stat-val {
+                    margin-left: 4px;
+                }
+            }
+        }
+
+        .user-details {
+            display: flex;
+            align-items: flex-end;
+            height: 64px;
+
+            .detail-wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                height: 64px;
+
+                h3, h4, h5 {
+                    margin: 0;
+                }
+
+                .name {
+                    margin-bottom: auto;
+                }
+            }
+            img {
+                height: 64px;
+                margin-right: 16px;
+            }
+        }
+    }
+}

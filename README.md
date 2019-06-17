@@ -1,68 +1,17 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To run:
 
-## Available Scripts
+1. Clone Repo
+2. Create `.env` with `REACT_APP_CONSUMER_KEY="THE_KEY"` in order to make API requests
+3. `yarn install`
+4. `yarn start`
 
-In the project directory, you can run:
+This took me approximately 2.5 hours to complete.
 
-### `npm start`
+For task 1, I went with a simple grid of cropped photos, with hover effects and buttons.
+For task 2, I had it pop up in a modal with some details on the bottom. 
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+When thinking on how to do task 3 in limited time, I decided that rather than make it nice and responsive or have extensive test coverage, I'd instead make it really extensible. My reasoning is that at the code review, adding tests or some responsive CSS will take a short amount of time while having to refactor this to make it extensible would take longer. 
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Instead, I implemented a full and extensible `redux` store and made sure that if we want to add new features, it would be simple. I also decided to work a bit on caching pages we visited already, to improve load times if we go to a page we have visited already. I also elected to use the new `hooks` api, partly because I've been wanting to try them for a while, but mostly because it can simplify logic a lot.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+If you wanted _some_ tests before the in person review, please let me know. I'll spend another half hour and add unit testing. I didn't want to go over time on this and implementing the store seemed like a better use of limited time. 

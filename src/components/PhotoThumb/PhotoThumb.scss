@@ -1,0 +1,33 @@
+.photo-thumb-container {
+    flex: 0 1;
+    height: 280px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    position: relative;
+
+    .hover-screen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        position: absolute;
+
+        .navigation-button {
+            height: 32px;
+            width: 100px;
+
+            &:first-child {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    &:hover > .hover-screen {
+        opacity: 0.75;
+        transition: opacity 0.25s ease-in;
+    }
+}
